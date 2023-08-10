@@ -9,16 +9,14 @@ document
     const telefone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
 
-    const data = {
-        'nome': nome,
-        'empresa': empresa,
-        'email': email,
-        'telefone': telefone,
-        'message': message
-    }
-
     try {
-        const response = await axios.post("192.168.1.26/api/cliente", { data });
+        const response = await axios.post("http://192.168.1.26/api/cliente", { 
+            nome: nome,
+            empresa: empresa,
+            email: email,
+            telefone: telefone,
+            message: message
+         });
         document.getElementById("response-content").innerHTML = response.data.message;
     } catch (error) {
         document.getElementById("response-content").innerHTML = error;
