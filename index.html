@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Formulário com TailwindCSS</title>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <form id="my-form" class="bg-white p-6 rounded shadow-md">
+            <h1 class="text-xl font-semibold mb-4">Meu Formulário</h1>
+            <label class="block mb-2" for="nome">Nome:</label>
+            <input class="w-full px-4 py-2 border rounded" type="text" id="nome" name="nome" required>
+            <label class="block mb-2 mt-4" for="Empresa">Empresa:</label>
+            <input class="w-full px-4 py-2 border rounded" type="text" id="empresa" name="empresa" required>
+            <label class="block mb-2 mt-4" for="email">E-mail:</label>
+            <input class="w-full px-4 py-2 border rounded" type="email" id="email" name="email" required>
+            <label class="block mb-2 mt-4" for="phone">Telefone:</label>
+            <input class="w-full px-4 py-2 border rounded" type="tel" id="phone" name="phone" required>
+            <label class="block mb-2 mt-4" for="message">Mensagem:</label>
+            <textarea class="w-full px-4 py-2 border rounded" id="message" name="message" rows="4" required></textarea>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                type="submit">Enviar</button>
+        </form>
+
+        <div class="mt-4 bg-white p-6 rounded shadow-md" id="response">
+            <div class="flex flex-row">
+                <h1 class="text-xl font-semibold mb-4">Resposta do servidor</h1>
+                <div class="ml-auto">
+                    <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" id="clear" onclick="clearResponse()">
+                        Limpar
+                    </button>
+                </div>
+            </div>
+
+            <div id="response-content"></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
