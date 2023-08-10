@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Busca user</title>
+</head>
+
+<body class="bg-gray-400 m-10 flex">
+    <div>
+        <h1 class="pb-4">Busca usuario</h1>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" class="rounded" required>
+        <button type="submit" id="botao" class="bg-white rounded p-1">Pesquisar</button>
+    </div>
+    <div id="usuario">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="busca.js"></script>
+</body>
+
+</html>

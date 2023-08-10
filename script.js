@@ -17,9 +17,11 @@ document
             telefone: telefone,
             message: message
          });
-        document.getElementById("response-content").innerHTML = response.data.message;
+          document.getElementById("response-content").innerHTML = response.data.message;
+        
     } catch (error) {
-        document.getElementById("response-content").innerHTML = error;
+        document.getElementById("response-content").innerHTML = 'Não encontrado';
+      
     }
   });
 
