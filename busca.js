@@ -1,13 +1,22 @@
-const busca_usuario = () => {
+const busca_usuario = async () => {
+
     const nome = document.getElementById('nome').value;
-    if(nome == ''){
+    
+    if (nome == '') {
         alert('nome obrigatorio')
+        return
     }
 
-    try{
-        const response = axios.get("http://192.168.1.26/api/cliente/nome/"+nome)
-        alert(response.data.message)
-    }catch(error){
-        alert(error.response.status)
+    try {
+        const response = await axios.get(
+            "http://192.168.1.26/api/cliente/nome/" + nome
+        );
+        const dados = response.data.dados;
+
+        alert('Empresa: ' + dados[0].empresa)
     }
+    catch (error) {
+        alert(error.response.data.message)
+    }
+    
 }
